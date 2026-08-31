@@ -1,18 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS180 Project 0</title>
+    <style>
+        body {
+            max-width: 1100px;
+            margin: 32px auto;
+            padding: 0 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            color: #111;
+            background: #fff;
+        }
+
+        h1 { line-height: 1.25; }
+        section { margin-top: 36px; }
+        h2 { line-height: 1.3; }
+        h3 { margin-bottom: 8px; }
+
+        .photos {
+            display: grid;
+            gap: 16px;
+            align-items: start;
+        }
+
+        .portraits { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+        .buildings { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+        figure { margin: 0; }
+        img { display: block; width: 100%; height: auto; }
+        figcaption { margin-top: 8px; text-align: center; font-size: 14px; }
+        .dolly-zoom { width: 375px; max-width: 100%; }
+
+        .explanation {
+            min-height: 72px;
+            margin: 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        @media (max-width: 700px) {
+            body { margin: 20px auto; }
+            .portraits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .buildings { grid-template-columns: 1fr; }
+        }
+
+        @media print {
+            body { max-width: none; margin: 0; padding: 0; font-size: 10pt; }
+            nav { display: none; }
+            section { break-inside: avoid; margin-top: 20px; }
+            .portraits { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+            .buildings { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .dolly-zoom { width: 225px; }
+            figcaption { font-size: 9pt; }
+            .explanation { min-height: 48px; }
+        }
+    </style>
 </head>
-
 <body>
+    <nav><a href="../index.html">Back to CS180 Portfolio</a></nav>
 
-<h1>Project 0: Becoming Friends with Your Camera</h1>
+    <main>
+        <h1>Project 0: Becoming Friends with Your Camera</h1>
 
-<h2>Part 1: Selfie</h2>
+        <section aria-labelledby="part1">
+            <h2 id="part1">Part 1: Selfie: The Wrong Way vs. The Right Way</h2>
+            <div class="photos portraits">
+                <figure>
+                    <img src="./media/profile1.jpg" alt="Portrait photograph 1" width="1082" height="1443">
+                    <figcaption>Portrait 1</figcaption>
+                </figure>
+                <figure>
+                    <img src="./media/profile2.jpg" alt="Portrait photograph 2" width="648" height="864">
+                    <figcaption>Portrait 2</figcaption>
+                </figure>
+                <figure>
+                    <img src="./media/profile3.jpg" alt="Portrait photograph 3" width="882" height="1177">
+                    <figcaption>Portrait 3</figcaption>
+                </figure>
+                <figure>
+                    <img src="./media/profile4.jpg" alt="Portrait photograph 4" width="1135" height="1513">
+                    <figcaption>Portrait 4</figcaption>
+                </figure>
+                <figure>
+                    <img src="./media/profile5.jpg" alt="Portrait photograph 5" width="1179" height="1572">
+                    <figcaption>Portrait 5</figcaption>
+                </figure>
+            </div>
+            <h3>Explanation</h3>
+            <p class="explanation">
+                <!-- Add the Part 1 explanation here. -->
+            </p>
+        </section>
 
-<h2>Part 2: Architectural Perspective Compression</h2>
+        <section aria-labelledby="part2">
+            <h2 id="part2">Part 2: Architectural Perspective Compression</h2>
+            <div class="photos buildings">
+                <figure>
+                    <img src="./media/building1.jpg" alt="Building photograph 1" width="971" height="728">
+                    <figcaption>Building 1</figcaption>
+                </figure>
+                <figure>
+                    <img src="./media/building6.jpg" alt="Building photograph 2" width="4032" height="3024">
+                    <figcaption>Building 2</figcaption>
+                </figure>
+            </div>
+            <h3>Explanation</h3>
+            <p class="explanation">
+                <!-- Add the Part 2 explanation here. -->
+            </p>
+        </section>
 
-<h2>Part 3: Dolly Zoom</h2>
-
+        <section aria-labelledby="part3">
+            <h2 id="part3">Part 3: The Dolly Zoom</h2>
+            <figure class="dolly-zoom">
+                <img src="./media/DollyZoom.gif" alt="Dolly zoom animation in a hallway" width="375" height="500">
+                <figcaption>Dolly Zoom</figcaption>
+            </figure>
+            <h3>Explanation</h3>
+            <p class="explanation">
+                <!-- Add the Part 3 explanation here. -->
+            </p>
+        </section>
+    </main>
 </body>
 </html>
